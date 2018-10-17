@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
+const Schema = mongoose.Schema;
 
-const insumoSchema = new mongoose.Schema(
+const insumoSchema = new Schema(
   {
     nome: {
       type: String,
@@ -9,17 +10,10 @@ const insumoSchema = new mongoose.Schema(
     valorUnitario: Number,
     quantidade: Number,
     valorTotal: Number,
-    etapas: [
-      {
-        id: {
-          type: Schema.Types.ObjectId,
-          ref: "etapas"
-        },
-        descricao: String,
-        valorEtapa: Number,
-        conclusaoEtapa: Number
-      }
-    ]
+    etapa: {
+      type: Schema.Types.ObjectId,
+      ref: "etapas"
+    }
   },
   { timestamps: true }
 );

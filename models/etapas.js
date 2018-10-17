@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
+const Schema = mongoose.Schema;
 
-const etapaSchema = new mongoose.Schema(
+const etapaSchema = new Schema(
   {
     descricao: {
       type: String,
@@ -8,21 +9,10 @@ const etapaSchema = new mongoose.Schema(
     },
     valorEtapa: Number,
     porcentagemConclusao: Number,
-    obras: [
-      {
-        id: {
-          type: Schema.Types.ObjectId,
-          ref: "obras"
-        },
-        nome: {
-          type: String,
-          required: true
-        },
-        responsavel: String,
-        conclusaoEtapa: Number,
-        valorObra: Number
-      }
-    ]
+    obra: {
+      type: Schema.Types.ObjectId,
+      ref: "obras"
+    }
   },
   { timestamps: true }
 );
