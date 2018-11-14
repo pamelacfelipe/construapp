@@ -1,0 +1,40 @@
+body {
+  background-color: #f9f9f9;
+}
+
+/* Seta cursor do materialize.css  */
+a {
+  cursor: pointer !important;
+}
+
+/* Aplicando estilo Bootstrap4 no SweetAlert2 */
+.swal2-icon.swal2-warning {
+  border-color: #f44336 !important;
+  color: #f44336 !important;
+}
+
+.swal2-actions button.swal2-styled.swal2-cancel {
+  text-transform: uppercase;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  background-color: transparent;
+  color: #343434;
+  cursor: pointer;
+  -webkit-transition: background-color 0.2s;
+  transition: background-color 0.2s;
+}
+
+.swal2-actions button.swal2-styled.swal2-confirm {
+  background-color: #03a9f4 !important;
+  border: none;
+  border-radius: 2px;
+  height: 36px;
+  line-height: 36px;
+  padding: 0 16px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  text-align: center;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+}

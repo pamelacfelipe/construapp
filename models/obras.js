@@ -6,9 +6,9 @@ const obraSchema = new mongoose.Schema(
       type: String,
       required: true
     },
-    responsavel: String,
-    conclusaoObra: Number,
-    valorObra: Number
+    responsavel: String
+    // conclusaoObra: String,
+    // valorObra: Number
   },
   { timestamps: true }
 );
