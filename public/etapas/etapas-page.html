@@ -1,0 +1,50 @@
+<div class="row">
+  <div class="col s12">
+    <div class="card">
+      <div class="card-content">
+        <div class="row valign-wrapper">
+          <div class="col s6"><h4>Etapa</h4></div>
+          <div class="col s6 right-align">
+            <a
+              ui-sref="app.etapas.new"
+              class="btn pink waves-effect waves-light"
+            >
+              <i class="material-icons left">add</i> Etapa
+            </a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s12">
+            <table class="table-responsive">
+              <thead>
+                <tr>
+                  <th>Nome</th>
+                  <th style="width: 7%;"></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr ng-repeat="item in vm.registros">
+                  <td class="align-middle">{{ item.descricao }}</td>
+                  <td>
+                    <a
+                      class="grey-text text-darken-2"
+                      ui-sref="app.etapas.edit({id: item._id})"
+                    >
+                      <i class="material-icons">edit</i>
+                    </a>
+                    <a
+                      class="grey-text text-darken-2"
+                      ng-click="vm.excluir(item._id)"
+                    >
+                      <i class="material-icons">delete</i>
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -7,11 +7,9 @@ const etapaSchema = new Schema(
       type: String,
       required: true
     },
-    valorEtapa: Number,
-    porcentagemConclusao: Number,
-    obra: {
+    insumo: {
       type: Schema.Types.ObjectId,
-      ref: "obras"
+      ref: "insumos"
     }
   },
   { timestamps: true }

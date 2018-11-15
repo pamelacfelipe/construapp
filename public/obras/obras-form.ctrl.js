@@ -23,7 +23,7 @@
 
     vm.salvar = function() {
       if (vm.obra._id) {
-        ClientesService.update(vm.obra).then(function() {
+        ObrasService.update(vm.obra).then(function() {
           swal({
             type: "success",
             title: "Obra atualizada com sucesso",
@@ -33,14 +33,14 @@
           $state.go("app.obras");
         });
       } else {
-        ClientesService.insert(vm.obra).then(function() {
+        ObrasService.insert(vm.obra).then(function() {
           swal({
             type: "success",
             title: "Obra inserido com sucesso",
             showConfirmButton: false,
             timer: 1500
           });
-          $state.go("app.obra");
+          $state.go("app.obras");
         });
       }
     };

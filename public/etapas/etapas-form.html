@@ -1,0 +1,27 @@
+<div class="row">
+    <div class="col s12">
+        <div class="card">
+            <div class="card-content">
+                <div class="row">
+                    <div class="col s12">
+                        <h4>{{vm.titulo}}</h4>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <label>Descrição da etapa</label>
+                        <input type="text" ng-model="vm.etapa.nome" class="validate">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12 right-align">
+                        <a class="btn-flat waves-effect waves-light" ui-sref="app.etapas">Cancelar</a>
+                        <button class="btn light-blue waves-effect waves-light" ng-click="vm.salvar()" type="submit">
+                            <i class="material-icons left">save</i> Salvar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
