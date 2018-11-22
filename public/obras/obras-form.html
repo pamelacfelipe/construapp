@@ -1,31 +1,39 @@
 <div class="row">
-    <div class="col s12">
-        <div class="card">
-            <div class="card-content">
-                <div class="row">
-                    <div class="col s12">
-                        <h4>{{vm.titulo}}</h4>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="input-field col s6">
-                        <label>Nome da obra</label>
-                        <input type="text" ng-model="vm.obra.nome" class="validate">
-                    </div>
-                    <div class="input-field col s6">
-                        <label>Engenheiro responsável</label>
-                        <input type="text" ng-model="vm.obra.responsavel" class="validate">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col s12 right-align">
-                        <a class="btn-flat waves-effect waves-light" ui-sref="app.obras">Cancelar</a>
-                        <button class="btn light-blue waves-effect waves-light" ng-click="vm.salvar()" type="submit">
-                            <i class="material-icons left">save</i> Salvar
-                        </button>
-                    </div>
-                </div>
-            </div>
+  <div class="col s12">
+    <div class="card">
+      <div class="card-content">
+        <div class="row">
+          <div class="col s12">
+            <h4>{{ vm.titulo }}</h4>
+          </div>
         </div>
+        <div class="row">
+          <div class="input-field col s6">
+            <label>Nome da obra</label>
+            <input type="text" ng-model="vm.obra.nome" class="validate" />
+          </div>
+          <div class="input-field col s6">
+            <label>Engenheiro responsável</label>
+            <input type="text" ng-model="vm.obra.responsavel" class="validate" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <label>Etapas</label>
+            <select ng-model="vm.obra.etapa" id="etapa">
+              <option ng-repeat="item in vm.registros" value="{{item._id}}">{{item.descricao}}</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s12 right-align">
+            <a class="btn-flat waves-effect waves-light" ui-sref="app.obras">Cancelar</a>
+            <button class="btn light-blue waves-effect waves-light" ng-click="vm.salvar()" type="submit">
+              <i class="material-icons left">save</i> Salvar
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 </div>

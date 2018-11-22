@@ -18,15 +18,15 @@
       });
     }
 
-    function insert(insumo) {
-      return $http.post(_URL, insumo).then(function(response) {
+    function insert(etapa) {
+      return $http.post(_URL, etapa).then(function(response) {
         return response.data;
       });
     }
 
-    function update(insumo) {
+    function update(etapa) {
       return $http
-        .put(_URL + "/" + insumo._id, insumo)
+        .put(_URL + "/" + etapa._id, etapa)
         .then(function(response) {
           return response.data;
         });
