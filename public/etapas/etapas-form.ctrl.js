@@ -36,7 +36,7 @@
           EtapasService.insert(vm.etapa).then(function() {
             swal({
               type: "success",
-              title: "Etapa inserido com sucesso",
+              title: "Etapa inserida com sucesso",
               showConfirmButton: false,
               timer: 1500
             });

@@ -19,7 +19,7 @@
 
     vm.excluir = function(id) {
       swal({
-        title: "Deseja realmente excluir esso insumo?",
+        title: "Deseja realmente excluir essa etapa?",
         type: "warning",
         showCancelButton: true,
         confirmButtonText: "Sim, excluir",
@@ -31,7 +31,7 @@
             vm.load();
             swal({
               type: "success",
-              title: "Insumo excluído com sucesso",
+              title: "Etapa excluída com sucesso",
               showConfirmButton: false,
               timer: 1500
             });

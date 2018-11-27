@@ -6,11 +6,11 @@ const etapaSchema = new Schema(
     descricao: {
       type: String,
       required: true
-    },
-    insumo: {
-      type: Schema.Types.ObjectId,
-      ref: "insumos"
     }
+    // insumo: {
+    //   type: Schema.Types.ObjectId,
+    //   ref: "insumos"
+    // }
   },
   { timestamps: true }
 );

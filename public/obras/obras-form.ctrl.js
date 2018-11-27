@@ -5,21 +5,17 @@
 
   ObrasFormController.$inject = [
     "ObrasService",
-    "EtapasService",
     "$state",
     "$stateParams"
   ];
 
   function ObrasFormController(
     ObrasService,
-    EtapasService,
     $state,
     $stateParams
   ) {
     var vm = this;
-    vm.registros = [];
     vm.obra = {};
-    vm.busca = '';
     vm.titulo = "Inserindo obra";
 
     if ($stateParams.id) {
@@ -30,7 +26,6 @@
     }
 
     vm.salvar = function () {
-      vm.obra.etapa = { _id: vm.etapa._id };
       if (vm.obra._id) {
         ObrasService.update(vm.obra).then(function () {
           swal({
@@ -45,7 +40,7 @@
         ObrasService.insert(vm.obra).then(function () {
           swal({
             type: "success",
-            title: "Obra inserido com sucesso",
+            title: "Obra inserida com sucesso",
             showConfirmButton: false,
             timer: 1500
           });
@@ -53,13 +48,5 @@
         });
       }
     };
-
-    load();
-
-    function load() {
-      EtapasService.findAll().then(function (registros) {
-        vm.registros = registros;
-      });
-    }
   }
 })();

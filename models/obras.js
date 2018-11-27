@@ -7,11 +7,11 @@ const obraSchema = new Schema(
       type: String,
       required: true
     },
-    responsavel: String,
-    etapa: {
-      type: Schema.Types.ObjectId,
-      ref: "etapas"
-    }
+    responsavel: String
+    // etapa: {
+    //   type: Schema.Types.ObjectId,
+    //   ref: "etapas"
+    // }
   },
   { timestamps: true }
 );
