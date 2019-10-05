@@ -1,11 +1,11 @@
-# api-construapp
-:construction: API nodeJS para o [construapp](https://api-construapp.herokuapp.com/#!/) 
+# Construapp
+:construction: O projeto [construapp](https://constru-app.herokuapp.com/#!/) 
+é para a conclusão do curso de Fullstack JS da Betha Sistemas.
 
 # Dependências
 
 ## Back-end
 * express
-* body-parser
 * mongoose
 
 ## Front-end
