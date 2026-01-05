@@ -1,8 +1,8 @@
 # Construapp
-:construction: O projeto [construapp](https://constru-app.herokuapp.com/#!/) 
-é para a conclusão do curso de Fullstack JS da Betha Sistemas.
+:construction: The project [construapp](https://constru-app.herokuapp.com/#!/) 
+is for conclusion of the Fullstack Javascript course.
 
-# Dependências
+# Dependencies
 
 ## Back-end
 * express
